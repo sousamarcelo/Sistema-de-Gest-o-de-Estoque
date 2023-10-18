@@ -1,15 +1,15 @@
 package model.entities;
 
-public class Product {
+public class Product {	
 	
-	private String name;
 	private Integer code;
+	private String name;
 	private Double price;
 	private Integer quantityInStok;
 	
-	public Product(String name, Integer code, Double price, Integer quantityInStok) {
-		this.name = name;
+	public Product(Integer code, String name, Double price, Integer quantityInStok) {
 		this.code = code;
+		this.name = name;		
 		this.price = price;
 		this.quantityInStok = quantityInStok;
 	}
@@ -48,7 +48,6 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", code=" + code + ", price=" + price + ", quantityInStok=" + quantityInStok
-				+ "]";
+		return "Codigo: " +  getCode() + ", Nome: " + getName() + ", Preço: " + getPrice() + ", Estoque: " + getQuantityInStok();
 	}
 }
